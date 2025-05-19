@@ -1,0 +1,49 @@
+<databaseChangeLog  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="insert-test-data-wallet" author="Timurka228">
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440000"/>
+            <column name="balance" value="1000.00"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440001"/>
+            <column name="balance" value="12300.30"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440002"/>
+            <column name="balance" value="40000.00"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440003"/>
+            <column name="balance" value="12000.00"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440004"/>
+            <column name="balance" value="10100.00"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440005"/>
+            <column name="balance" value="10020.20"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440006"/>
+            <column name="balance" value="13000.00"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440007"/>
+            <column name="balance" value="100000.00"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440008"/>
+            <column name="balance" value="1000000.52"/>
+        </insert>
+        <insert tableName="wallet">
+            <column name="wallet_id" value="550e8400-e29b-41d4-a716-446655440009"/>
+            <column name="balance" value="174000.00"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

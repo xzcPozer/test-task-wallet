@@ -1,0 +1,40 @@
+services:
+  postgres:
+    container_name: pg_database
+    image: postgres:17
+    environment:
+      POSTGRES_DB: bank_db
+      POSTGRES_USER: timurka228
+      POSTGRES_PASSWORD: timurka228
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - bank-net
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8088:8088
+    environment:
+      - DB_URL=jdbc:postgresql://postgres:5432/bank_db
+      - DB_USERNAME=timurka228
+      - DB_PASSWORD=timurka228
+      - SERVER_PORT=8088
+    depends_on:
+      - postgres
+    networks:
+      - bank-net
+    restart: unless-stopped
+
+
+networks:
+  bank-net:
+    driver: bridge
+
+volumes:
+  postgres:
